@@ -1,0 +1,76 @@
+{
+"picnicdemo": {
+    "information":{
+        "authors":"LucasBE",
+        "name":"Cherrier Picnic (DEMO)",
+        //DEM1
+    },
+    "slotType" : "main",
+    "slots": [
+        ["type", "default", "description"],
+        ["picnicdemo_body", "picnicdemo_body", "Body", {"coreSlot":true}],
+        ["licenseplate_design_2_1","","License Plate Design"],
+    ],
+    "scaledragCoef":1.6,
+    "scalenodeWeight":0.82,
+    "scalebeamSpring":0.8,
+    "scalebeamDamp":0.78,
+    "scalebeamDeform":0.85,
+    "scalebeamStrength":0.82,
+
+    "controller": [
+        ["fileName"],
+        ["vehicleController", {}],
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$brakestrength", "range", "", "Brakes", 1, 0.6, 1.0, "Brake Force Multiplier", "Scales the overall brake torque for this setup", {"minDis":60, "maxDis":100}],
+        ["$ffbstrength", "range", "", "Chassis", 1, 0.5, 1.5, "Setup-Specific Force Feedback Multiplier", "Scales the force feedback strength for THIS SETUP ONLY", {"minDis":50, "maxDis":150}],
+    ],
+    "interiorSounds": {
+        "rattleModifier": 0,
+        "dampingModifier": 0
+    },
+    "glowMap":{
+            "picnicdemo_signal_L":{"simpleFunction":{"signal_L":100}, "off":"picnicdemo_lights", "on":"picnicdemo_lights_on", "on_intense":"picnicdemo_lights_on_intense"},
+            "picnicdemo_signal_R":{"simpleFunction":{"signal_R":100}, "off":"picnicdemo_lights", "on":"picnicdemo_lights_on", "on_intense":"picnicdemo_lights_on_intense"},
+            "picnicdemo_taillight":{"simpleFunction":{"lowhighbeam":100}, "off":"picnicdemo_lights", "on":"picnicdemo_lights_on_intense", "on_intense":"picnicdemo_lights_on_intense"},
+            "picnicdemo_brakelight":{"simpleFunction":{"brake":100}, "off":"picnicdemo_lights", "on":"picnicdemo_lights_on", "on_intense":"picnicdemo_lights_on_intense"},
+            "picnicdemo_chmsl":{"simpleFunction":{"brake":100}, "off":"picnicdemo_lights", "on":"picnicdemo_lights_on", "on_intense":"picnicdemo_lights_on_intense"},
+            "picnicdemo_lowbeam":{"simpleFunction":{"lowbeam":0.49,"highbeam":1}, "off":"picnicdemo_lights", "on":"picnicdemo_lights_on", "on_intense":"picnicdemo_lights_on_intense"},
+            "picnicdemo_reverselight":{"simpleFunction":{"reverse":100}, "off":"picnicdemo_lights", "on":"picnicdemo_lights_on_intense", "on_intense":"picnicdemo_lights_on_intense"},
+            "picnicdemo_foglights":{"simpleFunction":{"fog":100}, "off":"picnicdemo_lights", "on":"picnicdemo_lights_on_intense", "on_intense":"picnicdemo_lights_on_intense"},
+
+            //gauge lights
+            "picnicdemo_gauges":{"simpleFunction":"lowhighbeam", "off":"picnicdemo_gauges", "on":"picnicdemo_gauges_on"},
+            "picnicdemo_gauges_signal_L":{"simpleFunction":"signal_L", "off":"picnicdemo_gauges", "on":"picnicdemo_gauges_acc_on"},
+            "picnicdemo_gauges_signal_R":{"simpleFunction":"signal_R", "off":"picnicdemo_gauges", "on":"picnicdemo_gauges_acc_on"},
+            "picnicdemo_gauges_engine":{"simpleFunction":"checkengine", "off":"picnicdemo_gauges", "on":"picnicdemo_gauges_acc_on"},
+            "picnicdemo_gauges_battery":{"simpleFunction":"battery", "off":"picnicdemo_gauges", "on":"picnicdemo_gauges_acc_on"},
+            "picnicdemo_gauges_lowbeam":{"simpleFunction":"lowhighbeam", "off":"picnicdemo_gauges", "on":"picnicdemo_gauges_acc_on"},
+            "picnicdemo_gauges_lowhighbeam":{"simpleFunction":"highbeam", "off":"picnicdemo_gauges", "on":"picnicdemo_gauges_acc_on"},
+            "picnicdemo_gauges_brake":{"simpleFunction":"parkingbrake", "off":"picnicdemo_gauges", "on":"picnicdemo_gauges_acc_on"},
+            "picnicdemo_gauges_fuel":{"simpleFunction":"lowfuel", "off":"picnicdemo_gauges", "on":"picnicdemo_gauges_acc_on"},
+            "picnicdemo_gauges_temp":{"simpleFunction":{"oilpressure":0.01}, "off":"picnicdemo_gauges", "on":"picnicdemo_gauges"},
+            "picnicdemo_gauges_foglights":{"simpleFunction":"fog", "off":"picnicdemo_gauges", "on":"picnicdemo_gauges_acc_on"}
+    },
+},
+"picnicdemo_interior_skin_interior_grey": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Grey Interior",
+        "value":200,
+    },
+    "slotType" : "skin_interior",
+    "globalSkin" : "grey",
+},
+"picnicdemo_interior_skin_interior_beige": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Beige Interior",
+        "value":300,
+    },
+    "slotType" : "skin_interior",
+    "globalSkin" : "beige",
+},
+}

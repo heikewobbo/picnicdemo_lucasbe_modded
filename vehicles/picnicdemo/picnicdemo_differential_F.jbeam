@@ -1,0 +1,66 @@
+{
+"picnicdemo_differential_F": {
+    "information":{
+        "authors":"LucasBE",
+        "name":"Open Front Differential",
+        "value":250,
+    },
+    "slotType" : "picnicdemo_differential_F",
+    "slots": [
+        ["type", "default", "description"],
+        ["picnicdemo_finaldrive_F","picnicdemo_finaldrive_F_389", "Front Final Drive", {"coreSlot":true}],
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["torsionReactor", "torsionReactorF", "gearbox", 1],
+        ["differential", "differential_F", "torsionReactorF", 1, {"diffType":"open", "gearRatio":1, "uiName":"Front Differential", "defaultVirtualInertia":0.25}],
+    ],
+    "differential_F": {
+        "friction": 1.5,
+        "dynamicFriction": 0.0007,
+        "torqueLossCoef": 0.016,
+    },
+    "torsionReactorF": {
+        "torqueReactionNodes:":["e1l","e2l","e4r"],
+    },
+},
+"picnicdemo_finaldrive_F_389": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"3.89:1 Front Final Drive",
+        "value":150,
+    },
+
+    "slotType" : "picnicdemo_finaldrive_F",
+
+    "torsionReactorF" : {
+        "gearRatio":3.89,
+    },
+},
+"picnicdemo_finaldrive_F_406": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"4.06:1 Front Final Drive",
+        "value":150,
+    },
+
+    "slotType" : "picnicdemo_finaldrive_F",
+
+    "torsionReactorF" : {
+        "gearRatio":4.06,
+    },
+},
+"picnicdemo_finaldrive_F_425": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"4.25:1 Front Final Drive",
+        "value":150,
+    },
+
+    "slotType" : "picnicdemo_finaldrive_F",
+
+    "torsionReactorF" : {
+        "gearRatio":4.25,
+    },
+},
+}

@@ -1,0 +1,42 @@
+{
+  "0-100 km/h":10.9,
+  "0-100 mph":28.1,
+  "0-200 km/h":93.5,
+  "0-60 mph":10.3,
+  "100-0 km/h":37.6,
+  "100-200 km/h":82.6,
+  "60-0 mph":115.9,
+  "60-100 mph":17.8,
+  "BoundingBox":[
+    [
+      -0.67,
+      -1.75,
+      -0.195
+    ],
+    [
+      1.17,
+      1.96,
+      1.361
+    ]
+  ],
+  "Braking G":1.046,
+  "Config Type":"Factory",
+  "Configuration":"1.3 City (M)",
+  "Description":"DEMO - Commuter base model, featuring a 1.3L I4",
+  "Drivetrain":"FWD",
+  "Fuel Type":"Gasoline",
+  "Induction Type":"NA",
+  "Off-Road Score":27,
+  "Population":12000,
+  "Power":93,
+  "PowerPeakRPM":"5800 - 6500",
+  "Propulsion":"ICE",
+  "Top Speed":56.143209,
+  "Torque":120,
+  "TorquePeakRPM":"4600 - 5650",
+  "Transmission":"Manual",
+  "Value":2600,
+  "Weight":900,
+  "Weight/Power":9.67741935,
+  "defaultPaintName1":"Bleu de Prusse"
+}

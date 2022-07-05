@@ -1,0 +1,40 @@
+{
+  "0-100 km/h":8.9,
+  "0-100 mph":25,
+  "0-60 mph":8.4,
+  "100-0 km/h":37,
+  "60-0 mph":112.3,
+  "60-100 mph":16.6,
+  "BoundingBox":[
+    [
+      -0.67,
+      -1.75,
+      -0.195
+    ],
+    [
+      1.17,
+      1.96,
+      1.361
+    ]
+  ],
+  "Braking G":1.064,
+  "Config Type":"Factory",
+  "Configuration":"1.4d Foxtrot (A)",
+  "Description":"DEMO - Base model van conversion, featuring a 1.4L diesel I4",
+  "Drivetrain":"FWD",
+  "Fuel Type":"Diesel",
+  "Induction Type":"NA",
+  "Off-Road Score":34,
+  "Population":12000,
+  "Power":100,
+  "PowerPeakRPM":4300,
+  "Propulsion":"ICE",
+  "Top Speed":53.9452529,
+  "Torque":185,
+  "TorquePeakRPM":"2200 - 3200",
+  "Transmission":"Automatic",
+  "Value":4100,
+  "Weight":880,
+  "Weight/Power":8.8,
+  "defaultPaintName1":"Blanc Lunaire"
+}

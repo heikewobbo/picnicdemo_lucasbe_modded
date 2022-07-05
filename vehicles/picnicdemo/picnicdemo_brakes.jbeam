@@ -1,0 +1,95 @@
+{
+"picnicdemo_brake_F": {
+    "information":{
+        "authors":"LucasBE",
+        "name":"Front Disc Brakes",
+        "value":250,
+    },
+    "slotType" : "picnicdemo_brake_F",
+    "slots": [
+        ["type", "default", "description"],
+        ["brakepad_F","brakepad_F", "Front Brake Pads", {"coreSlot":true}],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["brake_disc_solid", ["wheel_FR","wheelhub_FR"], [],                  {"pos":{"x":-0.705, "y":-1.18, "z":0.30}, "scale":{"x":0.75, "y":0.75, "z":0.75}, "rot":{"x": 0,    "y":180, "z":0   }}],
+        ["brake_disc_solid", ["wheel_FL","wheelhub_FL"], [],                  {"pos":{"x": 0.705, "y":-1.18, "z":0.30}, "scale":{"x":0.75, "y":0.75, "z":0.75}, "rot":{"x": 180,  "y":180, "z":0   }}],
+        ["brake_hub_4l", ["wheel_FR","wheelhub_FR"], [],                  {"pos":{"x":-0.705, "y":-1.18, "z":0.30}, "scale":{"x":0.5, "y":0.75, "z":0.75}, "rot":{"x": 0,    "y":180, "z":180   }}],
+        ["brake_hub_4l", ["wheel_FL","wheelhub_FL"], [],                  {"pos":{"x": 0.705, "y":-1.18, "z":0.30}, "scale":{"x":0.5, "y":0.75, "z":0.75}, "rot":{"x": 180,  "y":180, "z":0   }}],
+        ["brake_caliper_standard_plain", ["picnicdemo_hub_F","wheelhub_FR"], [], {"pos":{"x":-0.705, "y":-1.18, "z":0.30}, "scale":{"x":0.75, "y":0.75, "z":0.75}, "rot":{"x":0,    "y":0,   "z":0   }}],
+        ["brake_caliper_standard_plain", ["picnicdemo_hub_F","wheelhub_FL"], [], {"pos":{"x": 0.705, "y":-1.18, "z":0.30}, "scale":{"x":0.75, "y":0.75, "z":0.75}, "rot":{"x":0,    "y":180, "z":0   }}],
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        //brakes
+        {"brakeTorque":"$=$brakestrength*2850"},
+        {"brakeInputSplit":1},
+        {"brakeSplitCoef":1},
+        {"parkingTorque":0},
+        {"brakeSpring":125},
+
+        //brake thermals
+        {"enableBrakeThermals":true},
+        {"brakeDiameter":0.26},
+        {"brakeMass":6.5},
+        {"brakeType":"vented-disc"},
+        {"rotorMaterial":"steel"},
+        {"brakeVentingCoef":1.0},
+        //brake sounds
+        {"squealCoefNatural": 0.1, "squealCoefLowSpeed": 0.4}
+    ],
+},
+"picnicdemo_brake_R": {
+    "information":{
+        "authors":"LucasBE",
+        "name":"Rear Disc Brakes",
+        "value":200,
+    },
+    "slotType" : "picnicdemo_brake_R",
+    "slots": [
+        ["type", "default", "description"],
+        ["brakepad_R","brakepad_R", "Rear Brake Pads", {"coreSlot":true}],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["brake_disc_solid", ["wheel_RR","wheelhub_RR"], [],                  {"pos":{"x":-0.64, "y":1.18, "z":0.30}, "scale":{"x":0.7, "y":0.7, "z":0.7}, "rot":{"x": 0,    "y":180, "z":0   }}],
+        ["brake_disc_solid", ["wheel_RL","wheelhub_RL"], [],                  {"pos":{"x": 0.64, "y":1.18, "z":0.30}, "scale":{"x":0.7, "y":0.7, "z":0.7}, "rot":{"x": 180,  "y":180, "z":0   }}],
+        ["brake_hub_4l", ["wheel_RR","wheelhub_RR"], [],                  {"pos":{"x":-0.64, "y":1.18, "z":0.30}, "scale":{"x":0.7, "y":0.7, "z":0.7}, "rot":{"x": 0,    "y":180, "z":180   }}],
+        ["brake_hub_4l", ["wheel_RL","wheelhub_RL"], [],                  {"pos":{"x": 0.64, "y":1.18, "z":0.30}, "scale":{"x":0.7, "y":0.7, "z":0.7}, "rot":{"x": 180,  "y":180, "z":0   }}],
+        ["brake_caliper_standard_plain", ["picnicdemo_hub_R","wheelhub_RR"], [], {"pos":{"x":-0.64, "y":1.18, "z":0.30}, "scale":{"x":0.7, "y":0.7,  "z":0.7},  "rot":{"x": 180,  "y":0,   "z":0   }}],
+        ["brake_caliper_standard_plain", ["picnicdemo_hub_R","wheelhub_RL"], [], {"pos":{"x": 0.64, "y":1.18, "z":0.30}, "scale":{"x":0.7, "y":0.7,  "z":0.7},  "rot":{"x":-180,  "y":180, "z":0   }}],
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        //brakes
+        {"brakeTorque":"$=$brakestrength*500"},
+        {"brakeInputSplit":0.5},
+        {"brakeSplitCoef":0.5},
+        {"parkingTorque":1300},
+        {"brakeSpring":125},
+
+        //brake thermals
+        {"enableBrakeThermals":true},
+        {"brakeDiameter":0.24},
+        {"brakeMass":4.0},
+        {"brakeType":"disc"},
+        {"rotorMaterial":"steel"},
+        {"brakeVentingCoef":0.8},
+        //brake sounds
+        {"squealCoefNatural": 0.1, "squealCoefLowSpeed": 0.3}
+    ],
+},
+"picnicdemo_ABS": {
+    "information":{
+        "authors":"LucasBE",
+        "name":"Anti-Lock Braking System",
+        "value":250,
+    },
+    "slotType":"picnicdemo_ABS",
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        //brakes
+        {"enableABS":true},
+    ],
+},
+}

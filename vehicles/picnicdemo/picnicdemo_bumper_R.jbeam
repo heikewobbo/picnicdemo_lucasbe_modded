@@ -1,0 +1,328 @@
+{
+"picnicdemo_bumper_R": {
+    "information":{
+        "authors":"LucasBE",
+        "name":"Rear Bumper",
+        "value":350,
+    },
+    "slotType" : "picnicdemo_bumper_R",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["picnicdemo_bumper_R", ["picnicdemo_bumper_R"]],
+    ],
+    "slots": [
+        ["type", "default", "description"],
+        ["picnicdemo_mudflap_R","", "Rear Mudflaps"],
+    ],
+    "props": [
+        ["func"      , "mesh"              , "idRef:", "idX:", "idY:"            , "baseRotation"        , "rotation"                 , "translation"        , "min", "max", "offset", "multiplier"],
+        //license plate lights
+        {
+            "lightInnerAngle":100,
+            "lightOuterAngle":150,
+            "lightRange":0.27,
+            "lightColor":{"r":255, "g":255, "b":180, "a":255},
+            "lightAttenuation":{"x":0, "y":1, "z":1},
+            "lightCastShadows":false,
+            "cookieName":"art/special/BNG_light_cookie_headlight.dds"
+        },
+        /*l*/["lowhighbeam" ,         "SPOTLIGHT"        , "rb1l", "rb1", "rb2l", {"x":-90, "y":40, "z":-10} ,   {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":1, "y":0, "z":-0.015},"flareScale":0.0005,"lightBrightness":1.4}],
+        
+        /*m*/["lowhighbeam" ,         "SPOTLIGHT"        , "rb1l", "rb1", "rb2l", {"x":-100, "y":0, "z":0} ,   {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":1, "y":0, "z":-0.015},"flareScale":0.0005,"lightBrightness":1.4}],
+
+        /*r*/["lowhighbeam" ,         "SPOTLIGHT"        , "rb1r", "rb1", "rb2r", {"x":-90, "y":40, "z":10} ,    {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":1, "y":0, "z":0.015},"flareScale":0.0005,"lightBrightness":1.4}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"nodeMaterial":"|NM_PLASTIC"},
+         {"frictionCoef":0.8},
+         //--REAR BUMPER--
+         {"collision":true},
+         {"selfCollision":true},
+         {"group":"picnicdemo_bumper_R"},
+         {"nodeWeight":0.6},
+         ["rb1rr",-0.72, 1.64, 0.59],
+         ["rb1r",-0.40, 1.73, 0.59],
+         ["rb1", 0, 1.76, 0.59],
+         ["rb1l", 0.40, 1.73, 0.59],
+         ["rb1ll", 0.72, 1.64, 0.59],
+
+         ["rb2rr",-0.69, 1.67, 0.45],
+         ["rb2r",-0.40, 1.76, 0.45],
+         ["rb2", 0, 1.79, 0.45],
+         ["rb2l", 0.40, 1.76, 0.45],
+         ["rb2ll", 0.69, 1.67, 0.45],
+
+         ["rb3rr",-0.66, 1.63, 0.27],
+         ["rb3r",-0.40, 1.71, 0.29],
+         ["rb3", 0, 1.74, 0.30],
+         ["rb3l", 0.40, 1.71, 0.29],
+         ["rb3ll", 0.66, 1.63, 0.27],
+
+         ["rb4r",-0.79, 1.40, 0.59],
+         ["rb4l", 0.79, 1.40, 0.59],
+         ["rb5r",-0.72, 1.55, 0.25],
+         ["rb5l", 0.72, 1.55, 0.25],
+
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //--REAR BUMPER--
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":240600,"beamDamp":60},
+          {"beamDeform":29295,"beamStrength":53100},
+          //rear bumper main shape
+          {"deformLimitExpansion":1.1},
+          ["rb4r","rb1rr"],
+          ["rb1rr","rb1r"],
+          ["rb4r","rb2rr"],
+          ["rb2rr","rb2r"],
+          ["rb1l","rb1ll"],
+          ["rb4l","rb1ll"],
+          ["rb2l","rb2ll"],
+          ["rb4l","rb2ll"],
+          ["rb1r","rb1"],
+          ["rb1","rb1l"],
+
+
+          ["rb2r","rb2"],
+          ["rb2","rb2l"],
+
+          ["rb5r","rb3rr"],
+          ["rb3rr","rb3r"],
+          ["rb3r","rb3"],
+          ["rb3","rb3l"],
+          ["rb3l","rb3ll"],
+          ["rb5l","rb3ll"],
+
+          ["rb1rr","rb2rr"],
+          ["rb1r","rb2r"],
+          ["rb1l","rb2l"],
+          ["rb1ll","rb2ll"],
+          ["rb1","rb2"],
+
+          ["rb2rr","rb3rr"],
+          ["rb2r","rb3r"],
+          ["rb2","rb3"],
+          ["rb2l","rb3l"],
+          ["rb2ll","rb3ll"],
+
+          ["rb4r","rb5r"],
+          ["rb4l","rb5l"],
+
+          //crossing
+          {"deformLimitExpansion":""},
+          {"beamDeform":9855,"beamStrength":53100},
+          ["rb4r","rb3rr"],
+          ["rb5r","rb2rr"],
+          ["rb2rr","rb3r"],
+          ["rb3rr","rb2r"],
+          ["rb2r","rb3"],
+          ["rb3r","rb2"],
+          ["rb2","rb3l"],
+          ["rb3","rb2l"],
+          ["rb2l","rb3ll"],
+          ["rb3l","rb2ll"],
+          ["rb4l","rb3ll"],
+          ["rb5l","rb2ll"],
+
+          ["rb1rr","rb2r"],
+          ["rb1ll","rb2l"],
+          ["rb2rr","rb1r"],
+          ["rb2ll","rb1l"],
+          ["rb1r","rb2"],
+          ["rb1l","rb2"],
+          ["rb2r","rb1"],
+          ["rb2l","rb1"],
+
+          //rigids
+          {"beamDeform":5535,"beamStrength":53100},
+          {"beamSpring":150600,"beamDamp":60},
+          ["rb1rr","rb1"],
+          ["rb2rr","rb2"],
+          ["rb1","rb1ll"],
+          ["rb2","rb2ll"],
+          ["rb1r","rb1l"],
+
+          ["rb2r","rb2l"],
+
+          ["rb3rr","rb3"],
+          ["rb3r","rb3l"],
+          ["rb3","rb3ll"],
+
+          ["rb1rr","rb3rr"],
+          ["rb1r","rb3r"],
+          ["rb1","rb3"],
+          ["rb1l","rb3l"],
+          ["rb1ll","rb3ll"],
+
+          //weak
+          {"beamDeform":3375,"beamStrength":53100},
+          {"beamSpring":72600,"beamDamp":60},
+          ["rb4r","rb1r"],
+          ["rb1l","rb4l"],
+          ["rb5r","rb3r"],
+          ["rb3l","rb5l"],
+          ["rb4r","rb2r"],
+          ["rb2l","rb4l"],
+
+          //attach
+          {"disableTriangleBreaking":true},
+          {"beamSpring":280600,"beamDamp":120},
+          {"beamDeform":7375,"beamStrength":11750},
+          //r
+          {"breakGroup":"rearbumper_a_R"},
+          ["rb1rr","q6r"],
+          ["rb4r","q6r"],
+          ["rb4r","q5r"],
+          ["rb4r","q3r"],
+
+          //l
+          {"breakGroup":"rearbumper_a_L"},
+          ["rb1ll","q6l"],
+          ["rb4l","q6l"],
+          ["rb4l","q5l"],
+          ["rb4l","q3l"],
+
+          //middle
+          {"beamDeform":7375,"beamStrength":11750},
+          {"breakGroup":"rearbumper_M"},
+          ["rb2","r4"],
+          ["rb1","r4"],
+          ["rb2r","r4"],
+          ["rb2l","r4"],
+          ["rb2","r4rr"],
+          ["rb2r","r4rr"],
+          ["rb2l","r4ll"],
+          ["rb2","r4ll"],
+          
+          ["rb3","r3r"],
+          ["rb3","r3"],
+          ["rb3","r3l"],
+          {"breakGroup":""},
+
+          //rear bumper support beams
+          {"beamType":"|SUPPORT", "beamLongBound":4},
+          {"beamSpring":1401000,"beamDamp":120},
+          {"beamDeform":116765,"beamStrength":1125000},
+          {"optional":true},
+          ["rb2l","r3"],
+          ["rb2r","r3"],
+
+          ["rb2r","r3r"],
+          ["rb2l","r3l"],
+          ["rb2","r3r"],
+          ["rb2","r3l"],
+          {"optional":false},
+
+
+          ["rb1rr","q11r"],
+          ["rb1ll","q11l"],
+
+          ["rb1r","q11r"],
+          ["rb1l","q11l"],
+
+          ["rb1r","r7"],
+          ["rb1","r7"],
+          ["rb1l","r7"],
+          ["rb1rr","r7rr"],
+          ["rb1r","r7rr"],
+          ["rb1","r7rr"],
+          ["rb1","r7ll"],
+          ["rb1l","r7ll"],
+          ["rb1ll","r7ll"],
+
+          ["rb2r","r7"],
+          ["rb2","r7"],
+          ["rb2l","r7"],
+          ["rb2rr","r7rr"],
+          ["rb2r","r7rr"],
+          ["rb2","r7rr"],
+          ["rb2","r7ll"],
+          ["rb2l","r7ll"],
+          ["rb2ll","r7ll"],
+
+          ["rb2r","r4"],
+          ["rb2","r4"],
+          ["rb2l","r4"],
+          ["rb2rr","r4rr"],
+          ["rb2r","r4rr"],
+          ["rb2","r4rr"],
+          ["rb2","r4ll"],
+          ["rb2l","r4ll"],
+          ["rb2ll","r4ll"],
+
+          ["rb3r","r4"],
+          ["rb3","r4"],
+          ["rb3l","r4"],
+          ["rb3rr","r4rr"],
+          ["rb3r","r4rr"],
+          ["rb3","r4rr"],
+          ["rb3","r4ll"],
+          ["rb3l","r4ll"],
+          ["rb3ll","r4ll"],
+
+          //weak
+          {"beamDeform":32765,"beamStrength":1125000},
+          //upwards
+          ["rb1rr","q4r"],
+          ["rb1ll","q4l"],
+          ["rb1r","q4r"],
+          ["rb1l","q4l"],
+
+          //
+          ["rb3rr","r3rr"],
+          ["rb3ll","r3ll"],
+          ["rb5r","r3rr"],
+          ["rb5l","r3ll"],
+
+          ["rb2rr","q9r"],
+          ["rb2rr","q11r"],
+          ["rb2ll","q9l"],
+          ["rb2ll","q11l"],
+
+          {"breakGroup":""},
+          {"disableTriangleBreaking":false},
+          {"optional":false},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"deformLimitExpansion":1.1},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            //rear bumper
+            {"groundModel":"plastic"},
+            {"dragCoef":6},
+            {"group":"picnicdemo_bumper_R"},
+            ["rb1rr","rb2rr","rb4r"],
+            ["rb2rr","rb3rr","rb5r"],
+            ["rb2rr","rb5r","rb4r"],
+
+            ["rb1r","rb2r","rb2rr"],
+            ["rb1r","rb2rr","rb1rr"],
+            ["rb2r","rb3r","rb3rr"],
+            ["rb2r","rb3rr","rb2rr"],
+
+            ["rb1","rb2","rb2r"],
+            ["rb1","rb2r","rb1r"],
+            ["rb2","rb3","rb3r"],
+            ["rb2","rb3r","rb2r"],
+
+            ["rb2","rb1","rb2l"],
+            ["rb1","rb1l","rb2l"],
+            ["rb3","rb2","rb3l"],
+            ["rb2","rb2l","rb3l"],
+
+            ["rb2l","rb1l","rb2ll"],
+            ["rb1l","rb1ll","rb2ll"],
+            ["rb3l","rb2l","rb3ll"],
+            ["rb2l","rb2ll","rb3ll"],
+
+            ["rb2ll","rb1ll","rb4l"],
+            ["rb3ll","rb2ll","rb5l"],
+            ["rb5l","rb2ll","rb4l"],
+
+            {"group":""},
+    ],
+},
+}

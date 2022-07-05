@@ -1,0 +1,72 @@
+{
+  "picnicdemo_interior.skin_interior.grey": {
+    "name": "picnicdemo_interior.skin_interior.grey",
+    "mapTo": "picnicdemo_interior.skin_interior.grey",
+    "class": "Material",
+    "Stages": [
+    {
+      "ambientOcclusionMap": "/vehicles/picnicdemo/picnicdemo_interior_ao.data.png",
+      "baseColorMap": "/vehicles/picnicdemo/picnicdemo_interior_grey_b.color.png",
+      "emissiveFactor": [
+      2,
+      2,
+      2
+      ],
+      "emissiveMap": "/vehicles/picnicdemo/picnicdemo_interior_g.color.png",
+      "metallicFactor": 1,
+      "metallicMap": "/vehicles/picnicdemo/picnicdemo_interior_grey_m.data.png",
+      "normalMap": "vehicles/picnicdemo/picnicdemo_interior_grey_n.normal.png",
+      "pixelSpecular": true,
+      "roughnessMap": "/vehicles/picnicdemo/picnicdemo_interior_grey_r.data.png"
+    },
+    {
+      "emissive": true,
+      "emissiveMap": "/vehicles/picnicdemo/picnicdemo_interior_g.color.png",
+      "glow": true
+    },
+    {},
+    {}
+    ],
+    "alphaRef": 0,
+    "castShadows": true,
+    "dynamicCubemap": true,
+    "materialTag0": "LucasBE",
+    "materialTag1": "vehicle",
+    "version": 1.5
+  },
+  "picnicdemo_interior.skin_interior.beige": {
+    "name": "picnicdemo_interior.skin_interior.beige",
+    "mapTo": "picnicdemo_interior.skin_interior.beige",
+    "class": "Material",
+    "Stages": [
+    {
+      "ambientOcclusionMap": "/vehicles/picnicdemo/picnicdemo_interior_ao.data.png",
+      "baseColorMap": "/vehicles/picnicdemo/picnicdemo_interior_beige_b.color.png",
+      "emissiveFactor": [
+      2,
+      2,
+      2
+      ],
+      "emissiveMap": "/vehicles/picnicdemo/picnicdemo_interior_g.color.png",
+      "metallicFactor": 1,
+      "metallicMap": "/vehicles/picnicdemo/picnicdemo_interior_beige_m.data.png",
+      "normalMap": "vehicles/picnicdemo/picnicdemo_interior_beige_n.normal.png",
+      "pixelSpecular": true,
+      "roughnessMap": "/vehicles/picnicdemo/picnicdemo_interior_beige_r.data.png"
+    },
+    {
+      "emissive": true,
+      "emissiveMap": "/vehicles/picnicdemo/picnicdemo_interior_g.color.png",
+      "glow": true
+    },
+    {},
+    {}
+    ],
+    "alphaRef": 0,
+    "castShadows": true,
+    "dynamicCubemap": true,
+    "materialTag0": "LucasBE",
+    "materialTag1": "vehicle",
+    "version": 1.5
+  }
+}

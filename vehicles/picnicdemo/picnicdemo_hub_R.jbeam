@@ -1,0 +1,15 @@
+{
+"picnicdemo_hub_R_4": {
+    "information":{
+        "authors":"LucasBE",
+        "name":"4-Lug Rear Wheel Hubs",
+        "value":600,
+    },
+    "slotType" : "picnicdemo_hub_R",
+    "slots": [
+        ["type", "default", "description"],
+        ["picnicdemo_brake_R","picnicdemo_brake_R", "Rear Brakes"],
+        ["wheel_R_4","steelwheel_01a_14x5.5_R", "Rear Wheels", {"nodeOffset":{"x":"$=$trackoffset_R+0.20", "y":1.18, "z":0.30}}],
+    ],
+},
+}

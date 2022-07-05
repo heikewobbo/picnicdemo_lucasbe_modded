@@ -1,0 +1,43 @@
+{
+"picnicdemo_hub_F_4": {
+    "information":{
+        "authors":"LucasBE",
+        "name":"4-Lug Front Wheel Hubs",
+        "value":600,
+    },
+    "slotType" : "picnicdemo_hub_F",
+    "slots": [
+        ["type", "default", "description"],
+        ["picnicdemo_halfshafts_F","picnicdemo_halfshafts_F", "Front Halfshafts"],
+        ["picnicdemo_brake_F","picnicdemo_brake_F", "Front Brakes"],
+        ["wheel_F_4","steelwheel_01a_14x5.5_F", "Front Wheels", {"nodeOffset":{"x":"$=$trackoffset_F+0.24", "y":-1.18, "z":0.30}}],
+    ],
+},
+"picnicdemo_halfshafts_F": {
+    "information":{
+        "authors":"LucasBE",
+        "name":"Front Half Shafts",
+        "value":50,
+    },
+    "slotType" : "picnicdemo_halfshafts_F",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["picnicdemo_halfshafts_F", ["picnicdemo_hub_F","picnicdemo_transmission"]],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //halfshafts
+          {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.09, "beamShortBound":0.09},
+          {"beamSpring":0,"beamDamp":0,"beamDeform":4000,"beamStrength":8000},
+          {"beamLimitSpring":5001000,"beamLimitDamp":100},
+          ["fw1r","tra1r", {"name":"halfshaft_FR", "breakGroup":"wheel_FR", "breakGroupType":1, "deformGroup":"wheelaxleFR", "deformationTriggerRatio":0.001, "optional":true}],
+          ["fw1l","tra1l", {"name":"halfshaft_FL", "breakGroup":"wheel_FL", "breakGroupType":1, "deformGroup":"wheelaxleFL", "deformationTriggerRatio":0.001, "optional":true}],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["shaft", "wheelaxleFL", "differential_F", 1, {"deformGroups":["wheelaxleFL"], "breakTriggerBeam":"halfshaft_FL", "uiName":"Front Left Halfshaft", "friction":1.2, "dynamicFriction":0.0026}],
+        ["shaft", "wheelaxleFR", "differential_F", 2, {"deformGroups":["wheelaxleFR"], "breakTriggerBeam":"halfshaft_FR", "uiName":"Front Right Halfshaft", "friction":1.2, "dynamicFriction":0.0026}],
+    ],
+},
+}

@@ -1,0 +1,50 @@
+{
+"picnicdemo_lettering_city_FR": {
+    "information":{
+        "authors":"LucasBE",
+        "name":"City Lettering",
+        "value":8,
+    },
+    "slotType" : "picnicdemo_lettering_door_FR",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["picnicdemo_badge_city_R", ["picnicdemo_door_FR"]],
+    ],
+},
+"picnicdemo_lettering_city_FL": {
+    "information":{
+        "authors":"LucasBE",
+        "name":"City Lettering",
+        "value":8,
+    },
+    "slotType" : "picnicdemo_lettering_door_FL",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["picnicdemo_badge_city_L", ["picnicdemo_door_FL"]],
+    ],
+},
+"picnicdemo_badge_F": {
+    "information":{
+        "authors":"LucasBE",
+        "name":"Hood Lettering",
+        "value":5,
+    },
+    "slotType" : "picnicdemo_badge_F",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["picnicdemo_badge_F", ["picnicdemo_hood"]],
+    ],
+},
+"picnicdemo_badge_R": {
+    "information":{
+        "authors":"LucasBE",
+        "name":"Tailgate Lettering",
+        "value":5,
+    },
+    "slotType" : "picnicdemo_badge_R",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["picnicdemo_badge_R", ["picnicdemo_tailgate"]],
+    ],
+},
+}

@@ -1,0 +1,15 @@
+{
+"picnicdemo_steer": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Steering Wheel",
+        "value":250,
+    },
+    "slotType" : "picnicdemo_steer",
+    "props": [
+        ["func",     "mesh",          "idRef:", "idX:", "idY:", "baseRotation",            "rotation",            "translation",         "min", "max", "offset", "multiplier"],
+        //steering wheel
+        ["steering", "picnicdemo_steer", "int2l","int2r","int1l",        {"x":30, "y":0, "z":180}, {"x":0, "y":1, "z":0}, {"x":0, "y":0, "z":0}, -1000, 1000, 0, 1],
+     ],
+},
+}

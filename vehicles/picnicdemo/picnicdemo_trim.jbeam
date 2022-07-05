@@ -1,0 +1,20 @@
+{
+"picnicdemo_trim": {
+    "information":{
+        "authors":"LucasBE",
+        "name":"Side Trim",
+        "value":100,
+    },
+    "slotType" : "picnicdemo_trim",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["picnicdemo_trim_fender_FR", ["picnicdemo_fender_R"]],
+         ["picnicdemo_trim_fender_FL", ["picnicdemo_fender_L"]],
+
+         ["picnicdemo_trim_door_FR", ["picnicdemo_door_FR"]],
+         ["picnicdemo_trim_door_FL", ["picnicdemo_door_FL"]],
+         
+         ["picnicdemo_trim_body", ["picnicdemo_body"]],
+    ],
+},
+}
